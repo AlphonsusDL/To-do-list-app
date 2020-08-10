@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: normal;
+	line-height: 1.6;
+}
+
+// Utility classes
+.btn {
+	display: inline-block;
+	text-decoration: none;
+	border: none;
+	font-size: 1.3rem;
+	padding: 1.5rem 2rem;
+	border-radius: 5px;
+	background-color: #0f4c75;
+	color: #fff;
+	cursor: pointer;
+	flex: 2;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover {
+		background-color: lighten(#0f4c75, 5%);
+	}
+
+	&--secondary {
+		background-color: #333;
+
+		&:hover {
+			background-color: darken(#333, 10%);
+		}
+	}
+}
+//List app styling
+.section {
+	max-width: 90rem;
+	margin: 3rem auto;
+	border: 1px solid #eee;
+	padding: 5rem;
+
+	-webkit-box-shadow: -1px 9px 10px -6px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: -1px 9px 10px -6px rgba(0, 0, 0, 0.75);
+	box-shadow: -1px 9px 10px -6px rgba(0, 0, 0, 0.75);
+
+	&__heading {
+		font-size: 1.8rem;
+		margin-bottom: 2rem;
+		font-weight: 400;
+		color: #0f4c75;
+	}
+
+	&__form {
+		display: flex;
+		padding-bottom: 3rem;
+		border-bottom: 1px solid #00b7c2;
+	}
+
+	&__input {
+		flex: 7;
+		border-radius: 5px;
+		margin-right: 1.6rem;
+		background-color: #fff;
+		border: 1px solid #0f4c75;
+		padding: 0 2rem;
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 5px 8px -6px rgba(0, 0, 0, 0.75);
+		}
+	}
+}
+
+.card {
+	margin: 2rem 0;
+	padding: 2.5rem;
+
+	&__collection {
+		list-style: none;
+		color: #1b262c;
+	}
+
+	&__collection-item {
+		font-size: 1.6rem;
+		width: 100%;
+		padding-bottom: 1rem;
+
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+
+		&:not(:last-child) {
+			border-bottom: 1px dotted #eee;
+			margin-bottom: 1.5rem;
+		}
+
+		span {
+			display: inline-block;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 40%;
+				left: -3%;
+				transform: translate(-50%, -50%);
+				height: 0.8rem;
+				width: 0.8rem;
+				border-radius: 50%;
+				background: black;
+			}
+		}
+
+		i {
+			cursor: pointer;
+		}
+	}
+
+	&__delete {
+		&:link,
+		&:visited {
+			display: inline-block;
+			text-align: center;
+			text-decoration: none;
+			color: #fdcb9e;
+		}
+
+		&:hover {
+			color: #0f4c75;
+		}
+	}
+}

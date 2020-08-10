@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style/main.css" />
+		<script
+			src="https://kit.fontawesome.com/68a761b8dc.js"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="script/app.js" defer></script>
+		<title>To-Do List</title>
+	</head>
+	<body>
+		<div class="section">
+			<div class="section__container">
+				<h1 class="section__heading">General To-Do List app</h1>
+				<form id="task-list" class="section__form">
+					<input
+						type="text"
+						name="task"
+						id="task-input"
+						class="section__input"
+					/>
+					<button type="submit" class="btn" id="add-button">
+						Add
+					</button>
+				</form>
+
+				<div class="card">
+					<ul id="collection" class="card__collection">
+						<!-- <li class="card__collection-item">
+							<span>Take a bath</span>
+							<a href="#" class="card__delete">
+								<i class="fa fa-times"></i>
+							</a>
+						</li> -->
+					</ul>
+				</div>
+				<a href="#" id="clear-task" class="btn btn--secondary">Clear Tasks</a>
+			</div>
+		</div>
+	</body>
+</html>
