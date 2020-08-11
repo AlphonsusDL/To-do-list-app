@@ -6,7 +6,7 @@ const clearTasks = document.querySelector("#clear-task");
 loadEvents();
 
 function addTask(e) {
-	if (taskInput.value === "") {
+	if (taskInput.value === "" || taskInput.value === null) {
 		alert("Enter a task");
 	}
 
